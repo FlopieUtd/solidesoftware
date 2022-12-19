@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5JD507JZP1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5JD507JZP1');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Floris de Haan</title>
+  <meta name="description" content="Personal site of Groningen based freelance frontend engineer Floris de Haan" />
+  <meta name="author" content="Floris de Haan" />
+  <meta name="keywords" content="frontend engineer developer groningen freelance zzp react typescript vue javascript" />
+  <meta charset="UTF-8">
+  <meta property="og:title" content="Groningen based frontend engineer Floris de Haan" />
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="canonical" href="https://solidesoftware.nl/" />
+</head>
+
+<body>
+  <div class="splash section">
+    <image class="image background" alt="A cloudy sky" srcset="images/2a-small.webp 667w, images/2a.jpg 3000w"
+      sizes="100vw">
+      <h1 class="title">Solide Software</h1>
+      <image class="image front" alt="Floris de Haan" srcset="images/2-small.webp 1500w, images/2.webp 3000w"
+        sizes="100vw" />
+      <div class="crt-screen">
+        <div class="floris-name">Floris de Haan</div>
+        <div class="job-title">
+          <pre class="typewriter-text"></pre>
+          <div class="caret-wrapper">
+            <div class="caret">&#9646;</div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="content">
+    <h2>About</h2>
+    <h3>Biography</h3>
+    <p>Hi! I'm Floris. I'm a Groningen based frontend engineer with over <span class="years-experience">5</span>
+      years of experience in the field of frontend development. I graduated with a Master's degree in Communication
+      Sciences at the Rijksuniversiteit Groningen in 2016, and subsequently worked for the scale-ups Fotofabriek,
+      Simplicate and Dataprovider.com.</p>
+    <p>I'm passionate about approaching software development as an engineering discipline and I love helping teams make
+      their codebase
+      structured, predictable, maintainable, testable, and scalable.</p>
+    <p>I'm married, have a ginger tabby cat called Pierre and I'm eagerly learning to play the piano.</p>
+    <h3>Skill set</h3>
+    <p>I have extensive experience with the following technologies, languages, and methodologies:</p>
+    <div class="skill-set">
+      <div class="skill-set-item">JavaScript</div>
+      <div class="skill-set-item">TypeScript</div>
+      <div class="skill-set-item">HTML</div>
+      <div class="skill-set-item">CSS</div>
+      <div class="skill-set-item">Tailwind CSS</div>
+      <div class="skill-set-item">React</div>
+      <div class="skill-set-item">Redux</div>
+      <div class="skill-set-item">Vue.js</div>
+      <div class="skill-set-item">Vuex</div>
+      <div class="skill-set-item">MobX</div>
+      <div class="skill-set-item">Next.js</div>
+      <div class="skill-set-item">Git</div>
+      <div class="skill-set-item">Cypress</div>
+      <div class="skill-set-item">Jest</div>
+      <div class="skill-set-item">npm</div>
+      <div class="skill-set-item">TDD</div>
+      <div class="skill-set-item">CI/CD</div>
+      <div class="skill-set-item">Accessibility</div>
+      <div class="skill-set-item">Scrum</div>
+    </div>
+    <h3>Experience</h3>
+    <b>Dataprovider.com</b> (2021 - now)<br /><br />
+    <p>Dataprovider.com offers a structured search engine that indexes over 600 million internet domains and allows
+      users to refine search results by over 200 variables. At Dataprovider.com, I'm part of the Integrations team,
+      which is responsible for developing the core product's web application, as well as the customer facing website.
+    </p>
+    <p>At Dataprovider.com, I helped develop and succesfully execute a strategy to migrate the entire frontend
+      repository to TypeScript. I also initiated multiple knowledge sessions around topics like decoupling business
+      logic from view components, meaningful variable naming and proper use of comments. Finally, I helped develop a
+      strategy to refactor hard to maintain (1000+ lines of code) and untested components to smaller, single-concern and
+      unit tested components.</p>
+    <b>Simplicate</b> (2018 - 2021)<br /><br />
+    <p>Simplicate creates all-in-one business software covering CRM, sales management, project management, planning and
+      invoicing.</p>
+    <p>At Simplicate, I helped develop a wide range of functionalities on the platform, including a Google Calendar-like
+      time registration tool, a what-you-see-is-what-you-get PDF generator for creating quotes, and a sales funnel
+      kanban board.</p>
+    <b>Fotofabriek</b> (2017 - 2018)<br /><br />
+    <p>Fotofabriek runs several webshops in the printing industry. At Fotofabriek, I helped develop these webshops and
+      more specifically developed a product configurator in Angular and a later iteration in Vue.js.</p>
+    <h2>Contact</h2>
+    <form action="contact.php" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" oninput="validateContactForm()">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" oninput="validateContactForm()">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" oninput="validateContactForm()"></textarea>
+      <input type="submit" id="submit-contact-form" value="Send" title="Please fill in all fields." disabled>
+    </form>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
