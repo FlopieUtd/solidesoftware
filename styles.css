@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -72,102 +73,141 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  perspective: 1500px;
 }
 
-.image {
-  object-fit: cover;
-  position: absolute;
+.trading-card {
+  color: #111;
+
+  width: 360px;
+  height: 500px;
+
+  border-radius: 10px;
+  position: relative;
+
+  transition-duration: 300ms;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+
+  background: #e5d75f;
+  padding: 12px;
 }
 
-.background {
-  width: calc(100% - 48px);
-  height: calc(100% - 48px);
-}
-
-.front {
+.trading-card-content {
+  background-image: url(./images/blue.png);
   width: 100%;
   height: 100%;
-}
-
-.title {
-  position: absolute;
-  color: white;
-  font-size: 22vw;
-  font-family: Mermaid;
-  text-align: center;
-  text-transform: lowercase;
-}
-
-.crt-screen {
-  position: absolute;
-  top: 83%;
+  border-radius: 4px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.6);
-  height: 128px;
-  padding: 0 80px;
+  justify-content: space-between;
+
+}
+
+.trading-card-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  padding-bottom: 12px;
+  font-weight: bold;
+}
+
+.hp {
+  font-size: 12px;
+}
+
+.js {
+  display: inline;
+  height: 20px;
+  width: 20px;
+}
+
+.trading-card-image {
+  width: 100%;
+  background: #e5d75f;
+  aspect-ratio: 2/1.15;
+  padding: 4px;
+  box-shadow: 0px 5px 5px rgb(0 0 0 / 50%)
+}
+
+.trading-card-image-inner {
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/poke.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.subtitle-container {
+  display: flex;
   justify-content: center;
+}
+
+.subtitle {
+  background: #e5d75f;
+  padding: 2px 8px;
+  margin-top: 6px;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: bold;
+  display: flex;
   border-radius: 2px;
 }
 
-.crt-screen::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
-    linear-gradient(
-      90deg,
-      rgba(255, 0, 0, 0.06),
-      rgba(0, 255, 0, 0.02),
-      rgba(0, 0, 255, 0.06)
-    );
-  z-index: 2;
-  background-size: 100% 2px, 3px 100%;
-  pointer-events: none;
-  animation: flicker 0.15s infinite;
-}
-
-.floris-name {
-  color: white;
-  font-size: 64px;
-  letter-spacing: -2px;
-  font-family: Mermaid;
-  z-index: 2;
-  text-transform: lowercase;
-}
-
-.job-title {
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 7px;
-  margin-left: 40px;
+.trading-card-skills {
   display: flex;
+  margin-top: 12px;
+  flex-direction: column;
+}
+
+.trading-card-skills .skill {
+  margin-bottom: 12px;
+}
+
+.trading-card-skills .skill .skill-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  font-size: 14px;
-  animation: textShadow 1.6s infinite;
+  width: 100%;
+  margin-bottom: 4px;
 }
 
-.typewriter-text {
-  font-family: Roboto Mono, monospace;
-  min-height: 19px;
-  text-transform: uppercase;
+.skill-icons {
+  min-width: 48px;
+  display: flex; 
+  gap: 4px;
 }
 
-.caret-wrapper {
-  position: relative;
+.skill-icon {
+  width: 20px;
+  height: 20px;
 }
 
-.caret {
+.skill-name {
+  font-weight: bold;
+}
+
+.skill-score {
+  font-weight: bold;
+  min-width: 48px;
+  text-align: right;
+}
+
+.skill-description {
+  font-size: 12px;
+}
+
+.trading-card:hover {
+  transition-duration: 150ms;
+}
+
+.trading-card .glow {
   position: absolute;
-  transition: all 0.24s;
-  font-size: 28px;
-  animation: textShadow 1.6s infinite;
-  top: -20px;
-  color: transparent;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
 }
 
 .content {
@@ -175,6 +215,7 @@ body {
   padding: 24px 24px 72px;
   margin: 0 auto;
   max-width: 720px;
+  box-sizing: content-box;
 }
 
 .skill-set {
@@ -190,6 +231,24 @@ body {
   border-radius: 3px;
   font-size: 15px;
   letter-spacing: 0.4px;
+}
+
+.bottom-text {
+  border: 2px solid #e5d75f;
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.trading-card-footer {
+  display: flex;
+  font-size: 8px;
+  justify-content: space-between;
+}
+
+.illustration {
+  font-weight: bold;
 }
 
 form {
@@ -209,8 +268,8 @@ form textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 24px;
-  box-sizing: border-box;
   border-radius: 3px;
+  box-sizing: border-box;
 }
 
 form input:focus,
@@ -260,212 +319,23 @@ input[type="submit"]:disabled {
   align-items: center;
   flex-direction: column;
   padding: 24px;
-  box-sizing: border-box;
 }
 
-@keyframes flicker {
-  0% {
-    opacity: 0.27861;
-  }
-  5% {
-    opacity: 0.34769;
-  }
-  10% {
-    opacity: 0.23604;
-  }
-  15% {
-    opacity: 0.90626;
-  }
-  20% {
-    opacity: 0.18128;
-  }
-  25% {
-    opacity: 0.83891;
-  }
-  30% {
-    opacity: 0.65583;
-  }
-  35% {
-    opacity: 0.67807;
-  }
-  40% {
-    opacity: 0.26559;
-  }
-  45% {
-    opacity: 0.84693;
-  }
-  50% {
-    opacity: 0.96019;
-  }
-  55% {
-    opacity: 0.08594;
-  }
-  60% {
-    opacity: 0.20313;
-  }
-  65% {
-    opacity: 0.71988;
-  }
-  70% {
-    opacity: 0.53455;
-  }
-  75% {
-    opacity: 0.37288;
-  }
-  80% {
-    opacity: 0.71428;
-  }
-  85% {
-    opacity: 0.70419;
-  }
-  90% {
-    opacity: 0.7003;
-  }
-  95% {
-    opacity: 0.36108;
-  }
-  100% {
-    opacity: 0.24387;
-  }
+video {
+  clip-path: inset(1px 1px);
+  width: 100%;
+  height: 100%;
 }
 
-@keyframes textShadow {
-  0% {
-    text-shadow: 0.4389924193300864px 0 1px rgba(0, 30, 255, 0.5),
-      -0.4389924193300864px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  5% {
-    text-shadow: 2.7928974010788217px 0 1px rgba(0, 30, 255, 0.5),
-      -2.7928974010788217px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  10% {
-    text-shadow: 0.02956275843481219px 0 1px rgba(0, 30, 255, 0.5),
-      -0.02956275843481219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  15% {
-    text-shadow: 0.40218538552878136px 0 1px rgba(0, 30, 255, 0.5),
-      -0.40218538552878136px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  20% {
-    text-shadow: 3.4794037899852017px 0 1px rgba(0, 30, 255, 0.5),
-      -3.4794037899852017px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  25% {
-    text-shadow: 1.6125630401149584px 0 1px rgba(0, 30, 255, 0.5),
-      -1.6125630401149584px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  30% {
-    text-shadow: 0.7015590085143956px 0 1px rgba(0, 30, 255, 0.5),
-      -0.7015590085143956px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  35% {
-    text-shadow: 3.896914047650351px 0 1px rgba(0, 30, 255, 0.5),
-      -3.896914047650351px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  40% {
-    text-shadow: 3.870905614848819px 0 1px rgba(0, 30, 255, 0.5),
-      -3.870905614848819px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  45% {
-    text-shadow: 2.231056963361899px 0 1px rgba(0, 30, 255, 0.5),
-      -2.231056963361899px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  50% {
-    text-shadow: 0.08084290417898504px 0 1px rgba(0, 30, 255, 0.5),
-      -0.08084290417898504px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  55% {
-    text-shadow: 2.3758461067427543px 0 1px rgba(0, 30, 255, 0.5),
-      -2.3758461067427543px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  60% {
-    text-shadow: 2.202193051050636px 0 1px rgba(0, 30, 255, 0.5),
-      -2.202193051050636px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  65% {
-    text-shadow: 2.8638780614874975px 0 1px rgba(0, 30, 255, 0.5),
-      -2.8638780614874975px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  70% {
-    text-shadow: 0.48874025155497314px 0 1px rgba(0, 30, 255, 0.5),
-      -0.48874025155497314px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  75% {
-    text-shadow: 1.8948491305757957px 0 1px rgba(0, 30, 255, 0.5),
-      -1.8948491305757957px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  80% {
-    text-shadow: 0.0833037308038857px 0 1px rgba(0, 30, 255, 0.5),
-      -0.0833037308038857px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  85% {
-    text-shadow: 0.09769827255241735px 0 1px rgba(0, 30, 255, 0.5),
-      -0.09769827255241735px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  90% {
-    text-shadow: 3.443339761481782px 0 1px rgba(0, 30, 255, 0.5),
-      -3.443339761481782px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  95% {
-    text-shadow: 2.1841838852799786px 0 1px rgba(0, 30, 255, 0.5),
-      -2.1841838852799786px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
-  100% {
-    text-shadow: 2.6208764473832513px 0 1px rgba(0, 30, 255, 0.5),
-      -2.6208764473832513px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
-  }
+.pet-projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 640px) {
-  .title {
-    font-size: 20vw;
-    top: calc(20% - 25vw);
-  }
-
-  .crt-screen {
-    height: 100px;
-    padding: 0 32px;
-  }
-
-  .floris-name {
-    font-size: 48px;
-    letter-spacing: -1px;
-  }
-
-  .job-title {
-    letter-spacing: 5px;
-    font-size: 12px;
-    margin-left: 28px;
-  }
-
-  .caret {
-    font-size: 22px;
-    top: -17px;
-  }
-
-  .background {
-    width: calc(100% - 36px);
-    height: calc(100% - 36px);
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .crt-screen {
-    padding: 0 16px;
-    width: 100%;
-    align-items: center;
-  }
-
-  .floris-name {
-    font-size: 15vw;
-  }
-
-  .job-title {
-    margin-left: 0px;
-  }
-
-  .background {
-    width: calc(100% - 24px);
-    height: calc(100% - 24px);
-  }
+.pet-projects-container > * {
+  position: relative;
+  aspect-ratio: 1/1;
 }
