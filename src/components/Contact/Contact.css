@@ -1,0 +1,56 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  form label {
+    margin-bottom: 6px;
+  }
+  
+  form input,
+  form textarea {
+    all: unset;
+    border: 1px solid grey;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 24px;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    border-color: #7c4dff;
+    box-shadow: 0 0 0 1px #7c4dff;
+  }
+  
+  form textarea {
+    resize: none;
+    height: 160px;
+  }
+  
+  form input[type="submit"] {
+    background: #2962ff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: auto;
+    padding: 12px 48px;
+    border-radius: 3px;
+  }
+  
+  input[type="submit"]:hover {
+    background: #2979ff;
+  }
+  
+  input[type="submit"]:focus {
+    background: #7c4dff;
+  }
+  
+  input[type="submit"]:disabled {
+    background: #eee;
+    color: gray;
+    cursor: not-allowed;
+  }
+  

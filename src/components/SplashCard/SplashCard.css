@@ -1,0 +1,227 @@
+.flip {
+  width: 360px;
+  height: 500px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.flip:hover {
+  background: transparent;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #192653;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.card-back-content {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.codemon {
+  position: absolute;
+  transform: translate(10px, -10px);
+}
+
+.codemon.flipped {
+  transform: rotate(180deg) translate(10px, -10px);
+}
+
+.codemon-logo {
+  font-family: Pokemon;
+  color: white;
+  font-size: 120px;
+  text-shadow: 4px 4px #192653, -4px -4px #192653, 4px -4px #192653,
+    -4px 4px #192653;
+  transform: translate(-5px, 15px);
+}
+
+path {
+  fill: transparent;
+}
+
+svg text {
+  font-family: Pokemon;
+  font-size: 80px;
+  fill: #ffcc01;
+  text-shadow: 4px 4px #2c70b7, -4px -4px #2c70b7, 4px -4px #2c70b7,
+    -4px 4px #2c70b7, 0px 4px #2c70b7, 0px -4px #2c70b7, 4px 0px #2c70b7,
+    -4px 0px #2c70b7;
+  letter-spacing: 5px;
+  transform: rotate(8deg);
+  transform-origin: center;
+}
+
+.back-title.rotated {
+  transform: rotate(180deg) translateY(-100px);
+}
+
+.card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+
+  color: #111;
+
+  border-radius: 10px;
+
+  transition-duration: 300ms;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+
+  background: #e5d75f;
+  padding: 12px;
+}
+
+.card-front-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-front-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  padding-bottom: 12px;
+  font-weight: bold;
+}
+
+.hp {
+  font-size: 12px;
+}
+
+.js {
+  display: inline;
+  height: 20px;
+  width: 20px;
+  margin-left: 6px;
+}
+
+.card-front-image {
+  width: 100%;
+  background: #e5d75f;
+  aspect-ratio: 2/1.15;
+  padding: 4px;
+  box-shadow: 0px 5px 5px rgb(0 0 0 / 50%);
+}
+
+.card-front-image-inner {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.subtitle-container {
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle {
+  background: #e5d75f;
+  padding: 2px 8px;
+  margin-top: 6px;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: bold;
+  display: flex;
+  border-radius: 2px;
+}
+
+.card-front-skills {
+  display: flex;
+  margin-top: 12px;
+  flex-direction: column;
+}
+
+.card-front-skills .skill {
+  margin-bottom: 12px;
+}
+
+.card-front-skills .skill .skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.skill-icons {
+  min-width: 48px;
+  display: flex;
+  gap: 4px;
+}
+
+.skill-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.skill-name {
+  font-weight: bold;
+}
+
+.skill-score {
+  font-weight: bold;
+  min-width: 48px;
+  text-align: right;
+}
+
+.skill-description {
+  font-size: 12px;
+}
+
+.card-front:hover {
+  transition-duration: 150ms;
+}
+
+.flip .glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.bottom-text {
+  border: 2px solid #e5d75f;
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.card-front-footer {
+  display: flex;
+  font-size: 8px;
+  justify-content: space-between;
+}
+
+.illustration {
+  font-weight: bold;
+}
