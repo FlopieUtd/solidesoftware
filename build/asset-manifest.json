@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "./static/css/main.41e7df00.css",
+    "main.js": "./static/js/main.9a9a898a.js",
+    "static/media/NSL-bold.ttf": "./static/media/NSL-bold.c1fc3bf6e779fc564dd6.ttf",
+    "static/media/NSL-regular.ttf": "./static/media/NSL-regular.6d415ae286b7c12b86ed.ttf",
+    "static/media/Pokemon.ttf": "./static/media/Pokemon.5d60be1f7ff5fcc21fc1.ttf",
+    "index.html": "./index.html",
+    "main.41e7df00.css.map": "./static/css/main.41e7df00.css.map",
+    "main.9a9a898a.js.map": "./static/js/main.9a9a898a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41e7df00.css",
+    "static/js/main.9a9a898a.js"
+  ]
+}
